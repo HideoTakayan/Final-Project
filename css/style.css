@@ -1,0 +1,142 @@
+/* ===== GLOBAL SETTINGS ===== */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #dedede;
+  padding: 5px;
+  margin: 15px;
+  font-size: 25px;
+  font-family: Arial, sans-serif;
+}
+
+/* ===== HEADER ===== */
+header {
+  background-color: #007acc;
+  color: white;
+  padding: 20px 0;
+  border-radius: 15px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 1.95em;
+}
+
+h2 {
+  text-align: center;
+}
+
+/* ===== MAIN CONTENT ===== */
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+p {
+  line-height: 1.6;
+}
+
+li {
+  margin-top: 20px;
+}
+
+/* ===== IMAGE GRID & FIGURES ===== */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+figure {
+  background-color: #ffffff;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+figure:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+}
+
+img {
+  width: 100%;
+  height: auto;
+  border: 5px solid #007acc;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+figcaption {
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 1.1em;
+  color: #333;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  margin-top: 30px;
+  text-align: center;
+  background-color: #007acc;
+  padding: 10px;
+  color: white;
+  border-radius: 10px;
+}
+
+footer a {
+  color: #ff0;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* ===== TABLET VIEW (≥ 772px) ===== */
+@media (min-width: 772px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .grid figure {
+    border-radius: 50%;
+  }
+
+  .grid figure:last-child {
+    grid-column: span 2;
+  }
+}
+
+/* ===== LARGE SCREEN VIEW (≥ 992px) ===== */
+@media (min-width: 992px) {
+  .grid figure {
+    border-radius: 0;
+  }
+
+  .grid figure:nth-child(3n) {
+    grid-column: span 2;
+  }
+}
+
+/* ===== PREFERS REDUCED MOTION ===== */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* ===== DARK MODE ===== */
+@media (prefers-color-scheme: dark) {
+  figure {
+    background-color: #222;
+    color: #ffea70;
+    border-color: black;
+  }
+}
